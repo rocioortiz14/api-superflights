@@ -1,0 +1,288 @@
+{
+	"info": {
+		"_postman_id": "d3399ce1-e2c3-481e-a69f-5374b9df8924",
+		"name": "api-superflights",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "12696666"
+	},
+	"item": [
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "Create User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Francisco Ochoa\",\r\n    \"username\": \"@fran8a\",\r\n    \"email\": \"forespochi@gmail.com\",\r\n    \"password\": \"1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{endpoint}}/api/v1/user"
+					},
+					"response": []
+				},
+				{
+					"name": "Update User",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Rocio de Ochoa\",\r\n    \"username\": \"Rosy8a\",\r\n    \"email\": \"rocioochoa@gmail.com\",\r\n    \"password\": \"123467\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{endpoint}}/api/v1/user/64dafa0ab998abc06bf4b4d7"
+					},
+					"response": []
+				},
+				{
+					"name": "Get All User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{endpoint}}/api/v1/user"
+					},
+					"response": []
+				},
+				{
+					"name": "Get User by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{endpoint}}/api/v1/user/64daf90eb998abc06bf4b4d5"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "{{endpoint}}/api/v1/user/64daf90eb998abc06bf4b4d5"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "passenger",
+			"item": [
+				{
+					"name": "Create Passenger",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Passenger Two\",\r\n    \"email\": \"passengerotwo@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{endpoint}}/api/v1/passenger"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Passenger",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Passenger \",\r\n    \"email\": \"passenger@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{endpoint}}/api/v1/passenger/64dbf0868453dd4d0689ee88"
+					},
+					"response": []
+				},
+				{
+					"name": "Get All  Passengers",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{endpoint}}/api/v1/passenger"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Passenger",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "{{endpoint}}/api/v1/passenger/64dbf0868453dd4d0689ee88"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Passenger by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{endpoint}}/api/v1/passenger/64dbf0868453dd4d0689ee88"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "flight",
+			"item": [
+				{
+					"name": "Create Flight",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"pilot\": \"Pilot Frank\",\r\n    \"airplane\": \"Airbus 320\",\r\n    \"destinationCity\": \"Panama\",\r\n    \"flightDate\": \"2021-01-28\"\r\n\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{endpoint}}/api/v1/flight"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Flight All",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{endpoint}}/api/v1/flight"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Flight by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{endpoint}}/api/v1/flight/64dc0ff93869a1eb89e3ea10"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Flight",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "{{endpoint}}/api/v1/flight/64dc140c3869a1eb89e3ea18"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Flight",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"pilot\": \"Pilot Rocio\",\r\n        \"airplane\": \"Air 425\",\r\n        \"destinationCity\": \"london\",\r\n        \"flightDate\": \"2021-01-15T00:00:00.000Z\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{endpoint}}/api/v1/flight/64dc0ff93869a1eb89e3ea10"
+					},
+					"response": []
+				},
+				{
+					"name": "Add Passanger",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": "{{endpoint}}/api/v1/flight/64dc13c93869a1eb89e3ea13/passenger/64dbf7064f086032080f5701"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "signin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"@fran8a\",\r\n    \"password\": \"1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{endpoint}}/api/v1/auth/signin"
+					},
+					"response": []
+				},
+				{
+					"name": "signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Test\",\r\n    \"username\": \"@fran8a\",\r\n    \"email\": \"test@gmail.com\",\r\n    \"password\": \"1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{endpoint}}/api/v1/auth/signup"
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "endpoint",
+			"value": "localhost:27017"
+		}
+	]
+}
